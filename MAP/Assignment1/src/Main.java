@@ -13,6 +13,20 @@ public class Main {
         int[] bigNumber3 = {8,3,0,0,0,0,0,0,0};
         int[] bigNumber4 = {5,4,0,0,0,0,0,0,0};
         int[] bigNumber5 = {2,3,6,0,0,0,0,0,0};
+        int[] keyboards = {40,35,70,15,45};
+        int[] keyboards2 = {15, 20, 10, 35};
+        int[] usb = {20,15,40,15};
+        int[] usb2 = {15, 45, 20};
+
+        int[] keyboards3 = {40,50,60};
+        int[] usb3 = {8,12};
+
+        int[] keyboards4 = {60};
+
+        int[] keyboards5 = {40,60};
+
+
+        Aufgabe4 aufgabe4 = new Aufgabe4();
 
 
 
@@ -47,6 +61,21 @@ public class Main {
 
         //Division
         System.out.println("Division of the big Number: " + Arrays.toString(aufgabe3.divide(bigNumber5,2)));
+
+        System.out.println(aufgabe4.cheapestKeyboard(keyboards));
+
+        System.out.println(aufgabe4.mostExpensiveItem(keyboards2,usb));
+
+        System.out.println(aufgabe4.mostExpensiveInBudget(usb2, 30));
+
+        System.out.println(aufgabe4.inBudgetCombination(keyboards3,usb3,60));
+
+        System.out.println(aufgabe4.inBudgetCombination(keyboards4,usb3,60));
+
+        System.out.println(aufgabe4.inBudgetCombination(keyboards5,usb3,60));
+
+
+
 
     }
 }
