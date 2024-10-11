@@ -1,4 +1,26 @@
+import java.util.Arrays;
+
 public class Aufgabe1 {
+
+
+    public static void main(String[] args) {
+        Aufgabe1 array = new Aufgabe1();
+        int[] testArray = {29, 37, 38, 41, 84, 67};
+        int[] newArray = array.notEnoughGrade(testArray);
+        int[] roundedGrades = array.roundedGrades(testArray);
+
+        //prints the array of grades that are not enough
+        System.out.println("The Grades that are not enough: " + Arrays.toString(newArray));
+
+        //Average of the Grades
+        System.out.println("Avergae of the grades: " + array.averageGrade(testArray));
+
+        //Rounded up grades
+        System.out.println("ROunded Grades" + Arrays.toString(roundedGrades));
+
+        //Max rounded Grade
+        System.out.println("The Maximum rounded Grade is : " + array.maxRoundedGrade(testArray));
+    }
 
     public int[] notEnoughGrade(int[] grades) {
         int newSize = 0;
