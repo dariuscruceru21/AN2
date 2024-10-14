@@ -16,7 +16,7 @@ public class Aufgabe1 {
         System.out.println("Avergae of the grades: " + array.averageGrade(testArray));
 
         //Rounded up grades
-        System.out.println("ROunded Grades" + Arrays.toString(roundedGrades));
+        System.out.println("Rounded Grades" + Arrays.toString(roundedGrades));
 
         //Max rounded Grade
         System.out.println("The Maximum rounded Grade is : " + array.maxRoundedGrade(testArray));
