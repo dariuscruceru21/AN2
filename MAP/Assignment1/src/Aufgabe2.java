@@ -8,7 +8,7 @@ public class Aufgabe2 {
     }
 
     public static void main(String[] args) {
-        Aufgabe2 aufgabe2 = new Aufgabe2(5, new int[]{4, 8, 3, 10, 17});
+        Aufgabe2 aufgabe2 = new Aufgabe2(6, new int[]{4, 8, 3, 10, 17, 3});
         System.out.println("The Maximum number is: " + aufgabe2.maxNr());
         System.out.println("The Minimum number is: " + aufgabe2.minNr());
         System.out.println("The Maximum Sum of n - 1 numebrs  is: " + aufgabe2.maxSumWithoutOneNr());
@@ -36,18 +36,16 @@ public class Aufgabe2 {
         int maxSum = 0;
         int min = minNr();
         for (int i = 0; i < this.n; i++)
-            if (this.array[i] != min)
                 maxSum += this.array[i];
-        return maxSum;
+        return maxSum - min;
     }
 
     public int minSumWithoutOneNr() {
         int minSum = 0;
         int max = maxNr();
         for (int i = 0; i < this.n; i++)
-            if (this.array[i] != max)
-                minSum += this.array[i];
-        return minSum;
+            minSum += this.array[i];
+        return minSum - max;
 
     }
 }

@@ -1,0 +1,33 @@
+use EventManagment;
+
+INSERT into Events(EventId,Title,[Date],[Location])
+Values(4,'Untold','2024-07-21','Cluj-Napoca');
+
+SELECT * 
+from Events;
+
+SELECT * 
+from Participants;
+
+Select * 
+from Payments;
+
+insert into Participants(ParticipantId,LastName,FirstName,Email,EventId)
+Values(4,'Cruceru','Darius','dariuscruceru@gmail.com',4);
+
+
+insert into Participants(ParticipantId,LastName,FirstName,Email,EventId)
+Values(5,'Cruceru','Darius','dariuscruceru@gmail.com',5);
+
+Update Participants
+set Email = 'updatedemail@gmail.com'
+Where EventId in (1,4)
+and LastName is not NULL;
+
+
+
+
+
+
+
+

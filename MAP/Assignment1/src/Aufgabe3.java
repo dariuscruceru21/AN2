@@ -16,7 +16,7 @@ public class Aufgabe3 {
         System.out.println("Diff of the two big NUmbers: " + Arrays.toString(aufgabe3.diff(bigNumber3, bigNumber4)));
 
         //Multiplicaton
-        System.out.println("Multiplication of the big Number: " + Arrays.toString(aufgabe3.mul(bigNumber5, 2)));
+        System.out.println("Multiplication of the big Number: " + Arrays.toString(aufgabe3.mul(bigNumber5, 1)));
 
         //Division
         System.out.println("Division of the big Number: " + Arrays.toString(aufgabe3.divide(bigNumber5, 2)));
@@ -52,6 +52,7 @@ public class Aufgabe3 {
                 diff += 10;
                 borrow = 1;
             } else
+
                 borrow = 0;
             result[i] = diff;
 

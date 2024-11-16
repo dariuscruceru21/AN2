@@ -1,0 +1,47 @@
+%DATENBANK: Restaurant management
+
+%------Entitities------
+%manager(ManagerID,Salary,Name).
+manager(1,5000,'Darius').
+manager(2,4500,'Stefan').
+
+%department(DepartmentID,EmployeeCount,DepartmentName).
+department(1010,3,'Kitchen').
+department(1011,2,'Service').
+
+%employee(EmployeeID,Salary,Name).
+employee(101,2000,'Mark').
+employee(102,1700,'Robert').
+employee(115,2300,'Alex').
+
+%customer(CustomerID,Name,PartySize).
+customer(0001,'Dob',2).
+customer(0002,'Bob',4).
+customer(0003,'Lob',6).
+
+%dish(DishID,Price,Name).
+dish('A',15,'Pasta Carbonara').
+dish('B',22,'Grilled Salmon').
+dish('C',18,'Vegetarian Lasagna').
+
+%------Relations------
+%manages(ManagerID,DepartmentID).
+manages(1,1010).
+manages(2,1011).
+
+%isPartOf(EmployeeID,DepartmentID).
+isPartOf(101,1010).
+isPartOf(102,1011).
+isPartOf(115,1011).
+
+%orders(CustomerID,DishID).
+orders(0001,'A').
+orders(0002,'B').
+orders(0003,'C').
+
+% ------Functions------%
+% The Manager can handle only Employees from his one department 
+fire(ManagerID,EmployeeID) :- manages(ManagerID,DepartmentID),isPartOf(EmployeeID,DepartmentID).
+changeSalary(ManagerID,EmployeeID) :- manages(ManagerID,DepartmentID),isPartOf(EmployeeID,DepartmentID).
+%A service employee serves all who are customers
+servesCustomer(EmployeeID,CustomerID) :- isPartOf(EmployeeID,1011),customer(CustomerID,_,_).

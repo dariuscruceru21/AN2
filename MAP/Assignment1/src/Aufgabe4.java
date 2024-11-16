@@ -16,7 +16,7 @@ public class Aufgabe4 {
 
         System.out.println("Most expensive budget that I can buy: " + aufgabe4.mostExpensiveInBudget(usb2, 30));
 
-        System.out.println("Combination of items in budget: " + aufgabe4.inBudgetCombination(keyboards3, usb3, 60));
+        System.out.println("Combination of items in budget: " + aufgabe4.inBudgetCombination(keyboards4, usb3, 60));
 
 
     }
@@ -26,6 +26,7 @@ public class Aufgabe4 {
         for (int i = 0; i < keyboards.length; i++)
             if (keyboards[i] < min)
                 min = keyboards[i];
+
         return min;
     }
 

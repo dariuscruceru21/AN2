@@ -9,8 +9,9 @@ public class Aufgabe1 {
         int[] newArray = array.notEnoughGrade(testArray);
         int[] roundedGrades = array.roundedGrades(testArray);
 
+
         //prints the array of grades that are not enough
-        System.out.println("The Grades that are not enough: " + Arrays.toString(newArray));
+        System.out.println("The Grades that are not enough: " + Arrays.toString(array.notEnoughGrade(array.roundedGrades(testArray))));
 
         //Average of the Grades
         System.out.println("Avergae of the grades: " + array.averageGrade(testArray));
