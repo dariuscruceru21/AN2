@@ -1,0 +1,17 @@
+Tema Prolog 
+Ex 11
+
+%A11
+% Regel, die das KGV einer Liste von Zahlen berechnet
+kgv_liste([Kopf|Rest], KGV) :-
+    kgv_liste(Rest, Kopf, KGV).
+
+% Basisregel: Das KGV einer leeren Liste ist das aktuelle KGV
+kgv_liste([], KGV, KGV).
+
+% Rekursive Regel: Berechne das KGV des aktuellen Elements und des restlichen KGVs
+kgv_liste([Kopf|Rest], AktuellesKGV, KGV) :-
+    kgv(AktuellesKGV, Kopf, NeuesKGV),
+    kgv_liste(Rest, NeuesKGV, KGV).
+
+    
